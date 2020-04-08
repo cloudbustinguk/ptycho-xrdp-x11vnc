@@ -2,7 +2,8 @@
 
 *Work In Progress*
 
-CentOS 7 Linux with xrdp/x11vnc, and fvwm2.
+Minimal CentOS7 with xrdp/x11vnc, and fvwm2.
+
 Adapted from https://hub.docker.com/r/danielguerra/alpine-xfce4-xrdp - thanks Daniel!
 
 This is to serve as the base image for a Ptychography application, and is probably not
@@ -33,3 +34,6 @@ podman run -dt -p 3389:3389/tcp -v /path/to/data:/home/xray/data cloudbusting/pt
 podman run -dt -p 5900:5900/tcp -v /path/to/data:/home/xray/data cloudbusting/ptycho-xrdp-x11vnc
 ```
 
+# Screenshot
+
+![screenshot](https://user-images.githubusercontent.com/56673286/78801228-50821d00-79b4-11ea-92f0-c8dffe632a81.png)
