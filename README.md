@@ -12,6 +12,8 @@ for general purpose, unless you like vintage fvwm2 widgets (who doesn't..?).
 
 The paper relating to the `ptychoshelves` application is [here](http://scripts.iucr.org/cgi-bin/paper?zy5001)
 
+Find this image on the Docker Hub: [ptycho-xrdp-x11vnc](https://hub.docker.com/repository/docker/cloudbusting/ptycho-xrdp-x11vnc)
+
 # Usage
 
 Quick start to test things:
