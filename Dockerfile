@@ -1,6 +1,6 @@
 #Adapted from https://hub.docker.com/r/danielguerra/alpine-xfce4-xrdp
 FROM centos:centos7.7.1908
-LABEL maintainer="Daniel Webster <dsw@cloudbusting.io>"
+LABEL maintainer="Daniel Webster"
 
 ENV PATH=/usr/local/matlab/bin:/usr/lib64/openmpi3/bin:/usr/local/bin:$PATH \
     LD_LIBRARY_PATH=/usr/lib64/openmpi3/lib:/usr/local/lib64:/usr/local/lib:/opt/intel/psxe_runtime/linux/mkl/lib/intel64_lin \

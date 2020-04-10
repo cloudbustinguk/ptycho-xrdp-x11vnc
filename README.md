@@ -9,7 +9,11 @@ Adapted from https://hub.docker.com/r/danielguerra/alpine-xfce4-xrdp - thanks Da
 This is to serve as the base image for a Ptychography application, and is probably not
 for general purpose, unless you like vintage fvwm2 widgets (who doesn't..?).
 
+Will need MATLAB mounted into the container.
+
 **This image does not include any ptychographical solver application - which are subject to patent law**
+
+**This image does not include MATLAB, which is the property of The Mathworks, Inc**
 
 The paper relating to the `ptychoshelves` application is [here](http://scripts.iucr.org/cgi-bin/paper?zy5001)
 
