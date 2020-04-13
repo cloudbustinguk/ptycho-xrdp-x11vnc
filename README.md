@@ -23,8 +23,10 @@ Find this image on the Docker Hub: [ptycho-xrdp-x11vnc](https://hub.docker.com/r
 
 Quick start to test things:
 
+```bash
 user: xray
 pass: xray
+```
 
 ```bash
 podman run -dt -p 3389:3389/tcp cloudbusting/ptycho-xrdp-x11vnc

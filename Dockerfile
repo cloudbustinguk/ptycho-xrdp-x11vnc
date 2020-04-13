@@ -54,7 +54,7 @@ COPY usr/bin/ptycho /usr/bin/
 RUN groupadd xray \
 && useradd -g xray -s /bin/bash -m xray\
 && echo "xray:xray" | /usr/sbin/chpasswd \
-&& echo "xray ALL=(ALL) ALL" >> /etc/sudoers
+&& echo "xray ALL=(ALL)NOPASSWD:ALL" >> /etc/sudoers
 COPY xray /home/xray
 
 RUN xrdp-keygen xrdp auto
