@@ -42,4 +42,4 @@ podman run -dt -p 5900:5900/tcp -v /path/to/data:/home/xray/data cloudbusting/pt
 
 # Screenshot
 
-![screenshot](https://user-images.githubusercontent.com/56673286/78801228-50821d00-79b4-11ea-92f0-c8dffe632a81.png)
+![screenshot](https://user-images.githubusercontent.com/56673286/79483629-6f169280-800a-11ea-81ef-be39b1434df6.png)
