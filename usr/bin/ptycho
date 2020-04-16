@@ -1,3 +1,2 @@
 #!/bin/sh
-echo "This image does NOT include a solver."
-exit 1
+sudo /usr/local/matlab/bin/matlab 

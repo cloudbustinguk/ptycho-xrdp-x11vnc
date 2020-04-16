@@ -4,9 +4,12 @@ touch /home/xray/.Xauthority
 chown xray:xray /home/xray/.Xauthority
 uuidgen > /etc/machine-id
 
-echo "export QT_XKB_CONFIG_ROOT=/usr/share/X11/locale" >> /etc/profile
-echo "[ ! -z "$TERM" -a -r /etc/motd ] && cat /etc/motd" >> /etc/profile
+cat << EOF > /etc/profile.d/misc.sh
+#!/bin/bash
+export QT_XKB_CONFIG_ROOT=/usr/share/X11/locale 
+[ ! -z "$TERM" -a -r /etc/motd ] && cat /etc/motd
+EOF 
 
-source /etc/profile
+source /etc/profile.d/misc.sh
 
 exec "$@"

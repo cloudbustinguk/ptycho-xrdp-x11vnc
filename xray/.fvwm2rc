@@ -64,7 +64,7 @@ Style FvwmBanner  StaysOnTop
 
 # Styles for your common terminal emulator programs.
 # xterms and rxvts in a separate icon box:
-Style XTerm       Icon xterm.xpm, SloppyFocus, IconBox -70 1 -1 -140
+Style XTerm       Icon xterm.xpm, SloppyFocus, IconBox -70 1 -1 -140, Font "-*-lucida-*-r-normal-*-14-*-*-*-*-*-*-*"
 Style rxvt        Icon term.xpm, SloppyFocus, IconBox -70 1 -1 -140
 Style rxvt        MWMBorder, MWMButtons
 Style rdesktop	  Icon rdesktop.png
@@ -94,6 +94,17 @@ Style libreoffice* NoFuncHint
 *FvwmWharfBgColor	black
 *FvwmWharfTextureColor	dimgrey darkgrey
 
+*FvwmWharf Ptycho ptycho.xpm Exec /usr/bin/ptycho
+*FvwmWharf Xterm xterm.xpm Exec xterm +sb -ls -bg black -fg white -g 80x25
+*FvwmWharf Xcalc xcalc.xpm Exec xcalc
+*FvwmWharf HDFviewer HDF5.xpm Exec hdfview
+
+## BANNER
+
+*FvwmBanner: Pixmap /usr/share/icons/psi.xpm
+*FvwmBanner: Timeout 30
+
+
 # some simple default key bindings:
 Key Next         A       SCM     Next [*] Focus
 Key Prior        A       SCM     Prev [*] Focus
@@ -121,10 +132,11 @@ Mouse 3 TSIF    A       RaiseLower
 AddToFunc StartFunction
 + I Module FvwmAnimate
 + I Module FvwmBanner
++ I Module FvwmWharf
 
 AddToFunc InitFunction
 + I exec xsetroot -solid slategrey
-+ I exec xterm +sb -ls -bg black -fg white -g 80x25 -fa "xft:FreeMono:style=Regular" -fs 12
++ I Module FvwmBanner
 
 # For some SM-s (like gnome-session) there is an internal background setter.
 AddToFunc SessionInitFunction

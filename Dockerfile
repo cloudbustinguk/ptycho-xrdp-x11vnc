@@ -11,7 +11,7 @@ RUN yum -y install epel-release \
 	xorg-x11-xkb-utils util-linux gnu-free-serif-fonts gnu-free-sans-fonts \
 	gnu-free-mono-fonts xorg-x11-xauth supervisor x11vnc libgomp glibc-devel sudo file \
 	numactl-devel libaec-devel dbus dejavu-lgc-sans-fonts gedit unzip gzip tar pam libXt GConf2 \
-	gtk2 libXtst python xterm wget which curl bzip2 hdf5 hdf5-devel gtk2-devel libpng-devel \
+	gtk2 libXtst python xterm xcalc wget which curl bzip2 hdf5 hdf5-devel gtk2-devel libpng-devel \
 	ncurses-devel fftw-devel gmp-devel mpfr-devel libmpc-devel autoconf automake m4 openmpi3 \
 	libgcc.i686 glibc.i686 libstdc++.i686 libgcc-devel.i686 glibc-devel.i686 libstdc++-devel.i686 \
 	&& yum -y clean all
@@ -49,7 +49,7 @@ RUN dbus-uuidgen > /var/lib/dbus/machine-id
 
 COPY etc /etc/
 COPY docker-entrypoint.sh /bin
-COPY usr/bin/ptycho /usr/bin/
+COPY usr/ /usr/
 
 RUN groupadd xray \
 && useradd -g xray -s /bin/bash -m xray\
