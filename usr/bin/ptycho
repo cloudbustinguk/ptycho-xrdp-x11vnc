@@ -1,2 +1,2 @@
 #!/bin/sh
-sudo /usr/local/matlab/bin/matlab 
+sudo /usr/local/matlab/bin/matlab -desktop
