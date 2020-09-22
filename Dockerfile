@@ -1,7 +1,7 @@
 #Adapted from https://hub.docker.com/r/danielguerra/alpine-xfce4-xrdp
 #Adapted from a Singularity file by various people at DESY
 FROM centos:centos7.7.1908
-LABEL maintainer="Daniel Webster"
+LABEL maintainer="Daniel Webster <dsw@cloudbusting.io>"
 
 
 RUN yum -y install epel-release \
