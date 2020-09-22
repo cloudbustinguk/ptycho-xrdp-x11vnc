@@ -13,7 +13,7 @@ RUN yum -y install epel-release \
 	numactl-devel libaec-devel dbus dejavu-lgc-sans-fonts gedit unzip gzip tar pam libXt GConf2 \
 	gtk2 libXtst python xterm xcalc wget which curl bzip2 hdf5 hdf5-devel gtk2-devel libpng-devel \
 	ncurses-devel fftw-devel gmp-devel mpfr-devel libmpc-devel autoconf automake m4 openmpi3 \
-	libgcc.i686 glibc.i686 libstdc++.i686 libgcc-devel.i686 glibc-devel.i686 libstdc++-devel.i686 \
+	libgcc.i686 glibc.i686 libstdc++.i686 libgcc-devel.i686 glibc-devel.i686 libstdc++-devel.i686 alsa-lib \
 	&& yum -y clean all
 
 
