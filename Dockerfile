@@ -12,8 +12,8 @@ RUN yum -y install epel-release \
 	gnu-free-mono-fonts xorg-x11-xauth supervisor x11vnc libgomp glibc-devel sudo file \
 	numactl-devel libaec-devel dbus dejavu-lgc-sans-fonts gedit unzip gzip tar pam libXt GConf2 \
 	gtk2 libXtst python xterm xcalc wget which curl bzip2 hdf5 hdf5-devel gtk2-devel libpng-devel \
-	ncurses-devel fftw-devel gmp-devel mpfr-devel libmpc-devel autoconf automake m4 openmpi3 \
-	libgcc.i686 glibc.i686 libstdc++.i686 libgcc-devel.i686 glibc-devel.i686 libstdc++-devel.i686 alsa-lib \
+	ncurses-devel fftw-devel gmp-devel mpfr-devel libmpc-devel autoconf automake m4 openmpi3 openmpi3-devel \
+	libgcc.i686 glibc.i686 libstdc++.i686 libgcc-devel.i686 glibc-devel.i686 libstdc++-devel.i686 alsa-lib  \
 	&& yum -y clean all
 
 
@@ -44,6 +44,8 @@ ENV PATH=/usr/local/matlab/bin:/usr/lib64/openmpi3/bin:/usr/local/bin:$PATH \
     MATLABPATH=/usr/local/matlab/cSAXS_matlab_base:/usr/local/matlab/ptychoshelves \
     MLM_LICENSE_FILE=/usr/local/matlab/licenses/license.dat \
     MPI_HOME=/usr/lib64/openmpi3
+
+RUN echo "/usr/lib64/openmpi3/lib" >> /etc/ld.so.conf/openmpi3.conf
 
 RUN dbus-uuidgen > /var/lib/dbus/machine-id
 
