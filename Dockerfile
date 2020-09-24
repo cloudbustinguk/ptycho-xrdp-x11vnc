@@ -45,7 +45,7 @@ ENV PATH=/usr/local/matlab/bin:/usr/lib64/openmpi3/bin:/usr/local/bin:$PATH \
     MLM_LICENSE_FILE=/usr/local/matlab/licenses/license.dat \
     MPI_HOME=/usr/lib64/openmpi3
 
-RUN echo "/usr/lib64/openmpi3/lib" >> /etc/ld.so.conf/openmpi3.conf
+RUN echo "/usr/lib64/openmpi3/lib" >> /etc/ld.so.conf.d/openmpi3.conf
 
 RUN dbus-uuidgen > /var/lib/dbus/machine-id
 
